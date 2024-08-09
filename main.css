@@ -1,0 +1,1202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+:root {
+  --primaryColor: #0057b7;
+  --secondaryColor: #f3f6f8;
+  --whiteColor: #fff;
+  --greyColor: rgb(155, 158, 187);
+  --bgColor: #ebf1f3;
+  --hoverColor: #034b98;
+  --mainItemBGColor: #b0b7ca5e;
+  --tdActiveColor: #6e70905e;
+  --tdHoverColor: #cbceda;
+}
+
+.green {
+  --primaryColor: #459a7d;
+  --secondaryColor: #f3f6f8;
+  --whiteColor: #fff;
+  --greyColor: rgb(164, 172, 164);
+  --bgColor: #ebf1f3;
+  --hoverColor: #5eaa90;
+  --mainItemBGColor: #b0cac15e;
+  --tdActiveColor: #b0cac15e;
+  --tdHoverColor: #b0cac1;
+}
+
+.red {
+  --primaryColor: #ff0000;
+  --secondaryColor: #f8f3f3;
+  --whiteColor: #fff;
+  --greyColor: rgb(172, 164, 164);
+  --bgColor: #f3ebeb;
+  --hoverColor: #aa5e5e;
+  --mainItemBGColor: #cab0b05e;
+  --tdActiveColor: #cab0b05e;
+  --tdHoverColor: #cab0b0;
+}
+
+.blue {
+  --primaryColor: #0004ff;
+  --secondaryColor: #f3f3f8;
+  --whiteColor: #fff;
+  --greyColor: rgb(166, 164, 172);
+  --bgColor: #ebebf3;
+  --hoverColor: #5e63aa;
+  --mainItemBGColor: #b0b2ca5e;
+  --tdActiveColor: #b0b0ca5e;
+  --tdHoverColor: #b2b0ca;
+}
+
+.black {
+  --primaryColor: #3c3b64;
+  --secondaryColor: #f8f3f3;
+  --whiteColor: rgb(221, 218, 218);
+  --greyColor: rgb(189, 189, 189);
+  --bgColor: #e2e2e2;
+  --hoverColor: #595570;
+  --mainItemBGColor: #7774745e;
+  --tdActiveColor: #beb8b85e;
+  --tdHoverColor: #a5a2a2;
+}
+
+body {
+  background: var(--bgColor);
+  padding-top: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  position: relative;
+  width: 90vw;
+  height: 97vh;
+  background: var(--secondaryColor);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 8px rgba(171, 189, 182, 0.685);
+          box-shadow: 0px 4px 8px rgba(171, 189, 182, 0.685);
+}
+
+.main .sideMenu {
+  height: 100%;
+  width: 25%;
+  background: var(--primaryColor);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  overflow: hidden;
+}
+
+.main .sideMenu .logoDiv {
+  background: var(--hoverColor);
+  padding: 2rem 5rem 2rem 0;
+}
+
+.main .sideMenu .logoDiv .logoImage img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.main .sideMenu .logoText {
+  color: var(--whiteColor);
+  cursor: pointer;
+}
+
+.main .sideMenu .menuList {
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+.main .sideMenu .menuList ul {
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+}
+
+.main .sideMenu .menuList .list {
+  padding: 10px 2rem 10px 2.5rem;
+  color: var(--bgColor);
+  cursor: pointer;
+}
+
+.main .sideMenu .menuList .list:hover {
+  background: var(--hoverColor);
+  border-left: 2px solid var(--bgColor);
+}
+
+.main .sideMenu .menuList .list .icon {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.main .sideMenu .menuList .list .listName {
+  font-size: 1.1rem;
+}
+
+.main .sideMenu .menuList .list .listActive {
+  background: var(--hoverColor);
+  border-left: 2px solid var(--bgColor);
+}
+
+.main .mainContent {
+  position: absolute;
+  background: var(--secondaryColor);
+  height: 100%;
+  width: 80%;
+  right: 0;
+  top: 0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.main .mainContent .topSection {
+  background: var(--bgColor);
+  padding: 10px;
+  border-radius: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 10%;
+}
+
+.main .mainContent .topSection .seacrchBox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: var(--whiteColor);
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.main .mainContent .topSection .seacrchBox input {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main .mainContent .topSection .seacrchBox .icon {
+  opacity: 0.7;
+}
+
+.main .mainContent .topSection .seacrchBox .icon:hover {
+  opacity: 1;
+}
+
+.main .mainContent .topSection .userBox {
+  background: var(--whiteColor);
+  padding: 10px;
+  border-radius: 0.5rem;
+  gap: 10px;
+}
+
+.main .mainContent .topSection .userBox .adminImage {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.main .mainContent .topSection .userBox .adminImage img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .mainContent .topSection .userBox span {
+  line-height: 10px;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.main .mainContent .topSection .userBox .icon {
+  font-size: 25px;
+  position: relative;
+}
+
+.main .mainContent .topSection .userBox .icon::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #ffd900;
+  position: absolute;
+  top: 10px;
+  right: 2px;
+}
+
+.main .mainContent .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  height: 90%;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.main .mainContent .body .overViewDiv {
+  height: 10%;
+}
+
+.main .mainContent .body .overViewDiv .intro {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 5px;
+}
+
+.main .mainContent .body .overViewDiv .intro .toggleIcon {
+  font-size: 30px;
+  margin-right: 1rem;
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+.main .mainContent .body .overViewDiv .intro #select {
+  border: 1px solid var(--primaryColor);
+  padding: 5px;
+  background: var(--whiteColor);
+  border-radius: 5px;
+}
+
+.main .mainContent .body .overViewDiv .intro #select:focus {
+  outline: none;
+}
+
+.main .mainContent .body .overViewDiv .success {
+  background: #caedc7;
+  padding: 10px 20px;
+  color: #004c0a;
+  border-radius: 5px;
+}
+
+.main .mainContent .body .overViewDiv .fail {
+  background: #ffc8c8;
+  padding: 10px 20px;
+  color: #575555;
+  border-radius: 5px;
+}
+
+.main .mainContent .body .analysisDiv {
+  width: 100%;
+  height: 30%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .mainContent .body .analysisDiv .card {
+  padding: 1rem;
+  background-color: var(--whiteColor);
+  display: -ms-grid;
+  display: grid;
+  width: 240px;
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: 0px 2px 8px var(--mainItemBGColor);
+          box-shadow: 0px 2px 8px var(--mainItemBGColor);
+}
+
+.main .mainContent .body .analysisDiv .card:hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.main .mainContent .body .analysisDiv .card:hover small {
+  color: var(--whiteColor);
+}
+
+.main .mainContent .body .analysisDiv .card:hover .percentage {
+  color: var(--bgColor) !important;
+}
+
+.main .mainContent .body .analysisDiv .card:hover h1 {
+  color: var(--whiteColor) !important;
+}
+
+.main .mainContent .body .analysisDiv .card:hover .icon {
+  color: var(--whiteColor) !important;
+}
+
+.main .mainContent .body .analysisDiv .card:hover .negativeNumber {
+  color: #ff9100 !important;
+}
+
+.main .mainContent .body .analysisDiv .card .cartTitle {
+  -webkit-transition: none;
+  transition: none;
+  padding: 0 5px 10px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .mainContent .body .analysisDiv .card .cartTitle .icon {
+  font-size: 25px;
+  color: var(--primaryColor);
+}
+
+.main .mainContent .body .analysisDiv .card .cartTitle span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.main .mainContent .body .analysisDiv .card .cartTitle h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  color: var(--primaryColor);
+}
+
+.main .mainContent .body .analysisDiv .card .cardBody h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 5px 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.main .mainContent .body .analysisDiv .card .cardBody h2 .percentage {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--hoverColor);
+}
+
+.main .mainContent .body .analysisDiv .card .cardBody h2 .percentage .icon {
+  margin-left: 10px;
+}
+
+.main .mainContent .body .analysisDiv .card small {
+  color: var(--greyColor);
+}
+
+.main .mainContent .body .analysisDiv .card .negativeNumber {
+  color: #ff9100 !important;
+}
+
+.main .mainContent .body .analysisDiv .card .addIconsDiv {
+  height: 30px;
+  width: 30px;
+  background: var(--hoverColor);
+  border-radius: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .mainContent .body .analysisDiv .card .addIconsDiv .icon {
+  font-size: 20px;
+  color: var(--whiteColor);
+  text-align: center;
+}
+
+.main .mainContent .body .analysisDiv .active {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+}
+
+.main .mainContent .body .analysisDiv .active small {
+  color: var(--whiteColor);
+}
+
+.main .mainContent .body .analysisDiv .active .percentage {
+  color: var(--bgColor) !important;
+}
+
+.main .mainContent .body .analysisDiv .active .icon {
+  color: var(--whiteColor) !important;
+}
+
+.main .mainContent .body .analysisDiv .active .negativeNumber {
+  color: #ff9100 !important;
+}
+
+.main .mainContent .body .analysisDiv .active .addIconsDiv {
+  margin-left: 50px;
+  background: var(--whiteColor);
+}
+
+.main .mainContent .body .analysisDiv .active .addIconsDiv .icon {
+  color: var(--primaryColor) !important;
+}
+
+.main .mainContent .body .recentCases {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .mainContent .body .recentCases .graphDiv {
+  width: 70%;
+  height: 100%;
+}
+
+.main .mainContent .body .recentCases .graphDiv .swiperImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.main .mainContent .body .recentCases .graphDiv .swiperImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.main .mainContent .body .recentCases .rCases {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+  background: var(--whiteColor);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.main .mainContent .body .recentCases .rCases .title {
+  padding: 0 0 1rem;
+}
+
+.main .mainContent .body .recentCases .rCases .single_Case {
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main .mainContent .body .recentCases .rCases .single_Case:hover {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.418);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.418);
+}
+
+.main .mainContent .body .recentCases .rCases .single_Case img {
+  width: 20%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.main .mainContent .body .recentCases .rCases .single_Case .imgText .imageName {
+  display: block;
+  font-weight: 400;
+}
+
+.main .mainContent .body .recentCases .rCases .single_Case .imgText small {
+  color: var(--greyColor);
+}
+
+.addBtn {
+  background: var(--primaryColor);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.addBtn:hover {
+  background: var(--hoverColor);
+}
+
+.addBtn a {
+  color: var(--whiteColor);
+}
+
+.mainItems {
+  height: auto;
+  background: var(--mainItemBGColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.mainItems table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.mainItems table .tableHeader {
+  width: 100%;
+  background: var(--greyColor);
+  padding: 20px;
+}
+
+.mainItems table .tableHeader th {
+  padding: 10px;
+  color: var(--whiteColor);
+}
+
+.mainItems table .tableHeader th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.mainItems table .tableHeader th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.mainItems table .tableData {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.mainItems table .tableData:hover {
+  background: var(--tdActiveColor);
+}
+
+.mainItems table .tableData .editIcon,
+.mainItems table .tableData .comfirmIcon {
+  background: #459a7d;
+  color: var(--bgColor);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.mainItems table .tableData .editIcon:hover,
+.mainItems table .tableData .comfirmIcon:hover {
+  background: #31755e;
+}
+
+.mainItems table .tableData .followIcon {
+  background: #25c5ed;
+  color: var(--bgColor);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.mainItems table .tableData .followIcon:hover {
+  background: #3f8a9d;
+}
+
+.mainItems table .tableData .tickIcon {
+  background: #92efc5;
+  color: var(--whiteColor);
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+
+.mainItems table .tableData .deleteIcon {
+  background: #ed2525;
+  color: var(--bgColor);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.mainItems table .tableData .deleteIcon:hover {
+  background: #740202;
+}
+
+.mainItems table .tableData .detailsIcon {
+  background: #5e79c2;
+  color: var(--bgColor);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.mainItems table .tableData .detailsIcon:hover {
+  background: #3f4e77;
+}
+
+.mainItems table .tableData td {
+  padding: 10px;
+}
+
+.mainItems table .tableData td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: 500;
+  color: var(--primaryColor);
+  font-family: "Montserrat", sans-serif;
+}
+
+.mainItems table .tableData td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.mainItems table .active {
+  background: var(--tdActiveColor);
+}
+
+.mainItems table .tableData:nth-child(odd) {
+  background: var(--tdHoverColor);
+}
+
+.mainItems table .tableData:nth-child(odd):hover {
+  background: var(--tdActiveColor);
+}
+
+.settingsContainer {
+  height: auto;
+  background: var(--mainItemBGColor);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow-y: auto;
+}
+
+.settingsContainer .row {
+  margin: 0.8rem 0;
+  display: -ms-grid;
+  display: grid;
+}
+
+.settingsContainer .row label {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.settingsContainer .row label small {
+  margin-left: 1rem;
+  color: var(--greyColor);
+}
+
+.settingsContainer .row input,
+.settingsContainer .row select {
+  max-width: 400px;
+  padding: 10px 25px;
+  border-radius: 3rem;
+  border: none;
+  background: white;
+}
+
+.settingsContainer .row input:focus,
+.settingsContainer .row select:focus {
+  outline: none;
+}
+
+.settingsContainer .row .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settingsContainer .row .colors .green,
+.settingsContainer .row .colors .blue,
+.settingsContainer .row .colors .red,
+.settingsContainer .row .colors .black {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.settingsContainer .row .colors .green {
+  background: var(--primaryColor);
+}
+
+.settingsContainer .row .colors .red {
+  background: red;
+}
+
+.settingsContainer .row .colors .blue {
+  background: #001aff;
+}
+
+.settingsContainer .row .colors .black {
+  background: #1e1835;
+}
+
+.settingsContainer .pictureDiv h1 {
+  color: var(--primaryColor);
+}
+
+.settingsContainer .pictureDiv .imgDiv {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto 2rem;
+  border: 10px solid var(--tdHoverColor);
+}
+
+.settingsContainer .pictureDiv .imgDiv:hover #imgBtn {
+  display: block;
+}
+
+.settingsContainer .pictureDiv .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.settingsContainer .pictureDiv .imgDiv #file {
+  display: none;
+}
+
+.settingsContainer .pictureDiv .imgDiv #imgBtn {
+  position: absolute;
+  width: 100%;
+  background: var(--primaryColor);
+  text-align: center;
+  padding: 0.7rem 0.7rem 0.8rem;
+  bottom: 0px;
+  left: 0;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  font-size: 15px;
+  display: none;
+  -webkit-transition: display 0.5s ease;
+  transition: display 0.5s ease;
+}
+
+.addCaseContainer {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[2];
+      grid-template-columns: repeat(2, 400px);
+  gap: 4rem;
+  margin: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.addCaseContainer .followUpTitle {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.addCaseContainer .row {
+  margin: 0.8rem 0;
+  display: -ms-grid;
+  display: grid;
+}
+
+.addCaseContainer .row label {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.addCaseContainer .row label small {
+  margin-left: 1rem;
+  color: var(--greyColor);
+}
+
+.addCaseContainer .row input,
+.addCaseContainer .row select {
+  max-width: 400px;
+  padding: 10px 25px;
+  border-radius: 3rem;
+  border: none;
+  background: white;
+}
+
+.addCaseContainer .row input:focus,
+.addCaseContainer .row select:focus {
+  outline: none;
+}
+
+.addCaseContainer .row #submitBtn {
+  margin-top: 2rem;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.addCaseContainer .row #submitBtn:hover {
+  background: var(--tdHoverColor);
+}
+
+.addCaseContainer .row #desc,
+.addCaseContainer .row #desc2 {
+  max-width: 400px;
+  height: 200px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+}
+
+.addCaseContainer .row #desc:focus,
+.addCaseContainer .row #desc2:focus {
+  outline: none;
+}
+
+.addCaseContainer .row .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.addCaseContainer .row .colors .green,
+.addCaseContainer .row .colors .blue,
+.addCaseContainer .row .colors .red,
+.addCaseContainer .row .colors .black {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.addCaseContainer .row .colors .green {
+  background: var(--primaryColor);
+}
+
+.addCaseContainer .row .colors .red {
+  background: red;
+}
+
+.addCaseContainer .row .colors .blue {
+  background: #001aff;
+}
+
+.addCaseContainer .row .colors .black {
+  background: #1e1835;
+}
+
+.addCaseContainer .pictureDiv h1 {
+  color: var(--primaryColor);
+}
+
+.addCaseContainer .pictureDiv .imgDiv {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto 2rem;
+  border: 10px solid var(--tdHoverColor);
+}
+
+.addCaseContainer .pictureDiv .imgDiv:hover #imgBtn {
+  display: block;
+}
+
+.addCaseContainer .pictureDiv .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.addCaseContainer .pictureDiv .imgDiv #file {
+  display: none;
+}
+
+.addCaseContainer .pictureDiv .imgDiv #imgBtn {
+  position: absolute;
+  width: 100%;
+  background: var(--primaryColor);
+  text-align: center;
+  padding: 0.7rem 0.7rem 0.8rem;
+  bottom: 0px;
+  left: 0;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  font-size: 15px;
+  display: none;
+  -webkit-transition: display 0.5s ease;
+  transition: display 0.5s ease;
+}
+
+.nullValueContainer {
+  background: var(--mainItemBGColor);
+  height: 600px;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  justify-content: center;
+}
+
+.nullValueContainer .h1Title {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--tdHoverColor);
+}
+
+.nullValueContainer button {
+  display: block;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  background-color: var(--primaryColor);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--whiteColor);
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.nullValueContainer button:hover {
+  background: var(--hoverColor);
+}
+
+.detailsContainer {
+  width: 100%;
+  margin: auto;
+  height: 580px;
+  background: var(--mainItemBGColor);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+}
+
+.detailsContainer .row {
+  border-top: 1px solid var(--greyColor);
+  width: 80%;
+  margin: 0.8rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.detailsContainer .row .rowTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detailsContainer .row .value {
+  text-align: right;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.detailsContainer .row .value img {
+  border: 4px solid var(--hoverColor);
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+}
+
+.select_row {
+  background: none;
+  margin: 1rem 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  max-width: 100px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 1px solid blue;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+::-moz-selection {
+  background: var(--hoverColor);
+  color: var(--whiteColor);
+}
+
+::selection {
+  background: var(--hoverColor);
+  color: var(--whiteColor);
+}
+
+::-webkit-scrollbar {
+  background: var(--bgColor);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hoverColor);
+}
+/*# sourceMappingURL=main.css.map */
